@@ -23,7 +23,7 @@
 }
 
 .delete__title {
-  font-size: 2em;
+  font-size: 1.2em;
   margin-bottom: 0.6em;
   font-weight: bold;
 }
@@ -31,7 +31,7 @@
 .delete__name {
   display: flex;
   flex-wrap: wrap;
-  font-size: 1.5em;
+  font-size: 1em;
   margin-bottom: 1em;
 }
 
