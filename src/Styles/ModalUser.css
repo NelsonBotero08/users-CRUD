@@ -1,0 +1,64 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  min-height: 100px;
+}
+
+.modal-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.header__title--modal {
+  font-size: 2em;
+  margin-top: 0.3em;
+}
+
+.img__modal {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.div__info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.label__info {
+  font-size: 1.1em;
+  margin-bottom: 0.1em;
+}
+
+.input__info {
+  font-size: 1em;
+  border-radius: 0.2em;
+  padding: 0.1em 0.2em;
+}
+
+.form__btn {
+  width: 100%;
+  font-size: 0.9em;
+  text-align: center;
+  padding: 0.3em 3em;
+  background-color: rgb(108, 108, 219);
+  color: white;
+  border-radius: 0.3em;
+  cursor: pointer;
+  margin-top: 0.4em;
+}

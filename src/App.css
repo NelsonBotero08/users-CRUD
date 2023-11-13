@@ -1,0 +1,101 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2em;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  min-width: 80px;
+  padding: 0.1em 0.8em;
+  background-color: rgb(127, 127, 238);
+  color: white;
+  font-size: 0.7em;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+
+.header__img {
+  font-size: 1em;
+  color: white;
+  margin-right: 8px;
+}
+
+.usercard {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2em;
+  margin-top: 2em;
+}
+
+.success-message--create {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(76, 175, 78, 0.85);
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  animation: fadeOut 1.5s ease-in-out;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.success-message__p--rcreate {
+  font-size: 1.3em;
+}
+
+.success-message--errorcreate {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(172, 73, 43, 0.85);
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  animation: fadeOut 1.5s ease-in-out;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.success-message__p--errorcreate {
+  font-size: 1.3em;
+}
+
+@media (max-width: 550px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__btn {
+    margin-top: 10px;
+  }
+}

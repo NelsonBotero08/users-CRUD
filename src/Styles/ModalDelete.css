@@ -1,0 +1,73 @@
+.modal-overlaydelete {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content__delete {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  min-width: 200px;
+  min-height: 100px;
+}
+
+.delete__title {
+  font-size: 2em;
+  margin-bottom: 0.6em;
+  font-weight: bold;
+}
+
+.delete__name {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.delete__div--btn {
+  display: flex;
+  gap: 1em;
+}
+
+.delete__btn--yes {
+  background-color: #4caf4fc8;
+  padding: 0.3em 0.5em;
+  font-size: 1em;
+  color: white;
+  border-radius: 0.4em;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.33s background-color 0.33s box-shadow 0.33s ease;
+}
+
+.delete__btn--yes:hover {
+  transform: scale(1.1);
+  background-color: rgb(76, 175, 79);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.delete__btn--no {
+  background-color: rgba(185, 74, 74, 0.888);
+  padding: 0.3em 0.5em;
+  font-size: 1em;
+  color: white;
+  border-radius: 0.4em;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.33s background-color 0.33s box-shadow 0.33s ease;
+}
+
+.delete__btn--no:hover {
+  transform: scale(1.1);
+  background-color: rgb(185, 74, 74);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
