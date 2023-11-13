@@ -11,10 +11,8 @@
 
 .header__btn {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   border: none;
-  min-width: 80px;
   padding: 0.1em 0.8em;
   background-color: rgb(127, 127, 238);
   color: white;
@@ -97,5 +95,7 @@
 
   .header__btn {
     margin-top: 10px;
+    font-size: 1em;
+    padding: 0.3em 0.8em;
   }
 }
