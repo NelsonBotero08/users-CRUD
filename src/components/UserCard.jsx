@@ -26,7 +26,11 @@ const UserCard = ({ user, deleteUser, setInfoUpdate, openModal }) => {
   return (
     <article className="article__usercard">
       <section className="usercard__section">
-        <img className="usercard__img" src={user.image_url} alt="" />
+        <img
+          className="usercard__img"
+          src={user.image_url}
+          alt={user.first_name}
+        />
         <h3 className="usercard__name">
           {user.first_name} {user.last_name}
         </h3>
