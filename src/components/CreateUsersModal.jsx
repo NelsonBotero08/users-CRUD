@@ -157,7 +157,7 @@ const CreateUsersModal = ({
               type="text"
               placeholder="image_url"
               id="image_url"
-              defaultValue="../../"
+              defaultValue="../images/fotoNelson.jpeg"
             />
           </div>
           <button className="form__btn" onClick={handleSubmit(submit)}>
