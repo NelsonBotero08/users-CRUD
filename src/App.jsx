@@ -8,7 +8,7 @@ function App() {
   const [infoUpdate, setInfoUpdate] = useState();
   const [showCreateMessage, setShowCreateMessage] = useState(false);
   const [showUpdateMessage, setShowUpdateMessage] = useState(false);
-  const url = "https://users-crud.academlo.tech/";
+  const url = "http://localhost:8080";
   const [users, getUser, createUser, deleteUser, updateUser] = useCrud(url);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [error, setError] = useState(false);
