@@ -24,6 +24,16 @@ const useCrud = (baseUrl) => {
       });
   };
 
+  const getUserById = (path, id) => {
+    const url = `${baseUrl}${path}/${id}/`;
+    return axios
+      .get(url)
+      .then((res) => res.data)
+      .catch((e) => {
+        console.error(`Error al obtener el usuario por ID: ${id}`, e);
+      });
+  };
+
   const deleteApi = (path, id) => {
     const url = `${baseUrl}${path}/${id}/`;
     axios
@@ -51,7 +61,7 @@ const useCrud = (baseUrl) => {
       .catch((e) => console.log(e));
   };
 
-  return [infoApi, getApi, postApi, deleteApi, updateApi];
+  return [infoApi, getApi, postApi, getUserById, deleteApi, updateApi];
 };
 
 export default useCrud;

@@ -2,7 +2,13 @@ import React, { useState } from "react";
 import "../Styles/UserCard.css";
 import DeleteUserModal from "./DeleteUserModal";
 
-const UserCard = ({ user, deleteUser, setInfoUpdate, openModal }) => {
+const UserCard = ({
+  user,
+  deleteUser,
+  setInfoUpdate,
+  openModal,
+  handleUserClick,
+}) => {
   const [openModalDelete, setOpenModalDelete] = useState(false);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
@@ -10,7 +16,8 @@ const UserCard = ({ user, deleteUser, setInfoUpdate, openModal }) => {
     setOpenModalDelete(!openModalDelete);
   };
 
-  const handleDelete = () => {
+  const handleDelete = (e) => {
+    e.stopPropagation();
     deleteUser("/users", user.id);
     setShowSuccessMessage(true);
 
@@ -19,18 +26,27 @@ const UserCard = ({ user, deleteUser, setInfoUpdate, openModal }) => {
     }, 1500);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.stopPropagation();
     setInfoUpdate(user);
     openModal();
   };
+
   return (
-    <article className="article__usercard">
+    <article
+      onClick={() => handleUserClick(user)}
+      className="article__usercard"
+    >
       <section className="usercard__section">
-        <img
-          className="usercard__img"
-          src={user.image_url}
-          alt={user.first_name}
-        />
+        {user.image_url ? (
+          <img
+            className="usercard__img"
+            src={user.image_url}
+            alt={user.first_name}
+          />
+        ) : (
+          <i className="bx bx-user bx-user--usercard"></i>
+        )}
         <h3 className="usercard__name">
           {user.first_name} {user.last_name}
         </h3>
