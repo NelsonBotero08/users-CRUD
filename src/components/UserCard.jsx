@@ -17,7 +17,8 @@ const UserCard = ({
     setOpenModalDelete(!openModalDelete);
   };
 
-  const handleDelete = () => {
+  const handleDelete = (e) => {
+    e.stopPropagation();
     deleteUser("/users", user.id);
     setShowSuccessMessage(true);
 
