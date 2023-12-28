@@ -13,8 +13,9 @@ const DeleteUserModal = ({ handleModalDelet, user, handleDelete }) => {
         <div className="delete__div--btn">
           <button
             className="delete__btn--yes"
-            onClick={() => (e) => {
+            onClick={(e) => {
               e.stopPropagation();
+              handleDelete(e);
               handleModalDelet();
             }}
           >
@@ -22,7 +23,7 @@ const DeleteUserModal = ({ handleModalDelet, user, handleDelete }) => {
           </button>
           <button
             className="delete__btn--no"
-            onClick={() => (e) => {
+            onClick={(e) => {
               e.stopPropagation();
               handleModalDelet();
             }}
