@@ -35,7 +35,7 @@ const UserDetails = () => {
       <Link className="home__detail" to="/">
         Home
       </Link>
-      <h2 className="title__detail">Detalles del Usuario</h2>
+      <h2 className="title__detail">Detalle Usuario</h2>
       <section className="section__detail">
         <div className="div__img">
           {userDetails.image_url ? (
