@@ -14,12 +14,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  margin-bottom: 1em;
 }
 
 .title__detail {
-  font-size: 1.5em;
-  margin-bottom: 2em;
+  font-size: 2em;
+  margin: 2em 0;
 }
 
 .section__detail {
@@ -58,4 +57,10 @@
 .section__detail > p {
   font-size: 1em;
   margin-bottom: 0.4em;
+}
+
+@media (max-width: 700px) {
+  .title__detail {
+    font-size: 1em;
+  }
 }
