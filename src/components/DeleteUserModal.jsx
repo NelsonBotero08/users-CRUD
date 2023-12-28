@@ -11,12 +11,21 @@ const DeleteUserModal = ({ handleModalDelet, user, handleDelete }) => {
         </p>
 
         <div className="delete__div--btn">
-          <button className="delete__btn--yes" onClick={() => handleDelete()}>
+          <button
+            className="delete__btn--yes"
+            onClick={() => (e) => {
+              e.stopPropagation();
+              handleModalDelet();
+            }}
+          >
             Aceptar
           </button>
           <button
             className="delete__btn--no"
-            onClick={() => handleModalDelet()}
+            onClick={() => (e) => {
+              e.stopPropagation();
+              handleModalDelet();
+            }}
           >
             Cancelar
           </button>
