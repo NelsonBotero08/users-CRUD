@@ -14,10 +14,11 @@
   position: absolute;
   top: 0;
   left: 0;
+  margin-bottom: 1em;
 }
 
 .title__detail {
-  font-size: 2em;
+  font-size: 1.5em;
   margin-bottom: 2em;
 }
 
