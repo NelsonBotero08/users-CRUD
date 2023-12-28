@@ -8,7 +8,7 @@ const HomeUsers = () => {
   const [infoUpdate, setInfoUpdate] = useState();
   const [showCreateMessage, setShowCreateMessage] = useState(false);
   const [showUpdateMessage, setShowUpdateMessage] = useState(false);
-  const url = "http://localhost:8080";
+  const url = "https://users-crud-backend-dev-dxxb.1.us-1.fl0.io";
   const [users, getUser, createUser, getIdUser, deleteUser, updateUser] =
     useCrud(url);
 

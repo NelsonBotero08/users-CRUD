@@ -6,7 +6,9 @@ import "../Styles/UserDetailId.css";
 const UserDetails = () => {
   const [userDetails, setUserDetails] = useState(null);
   const [error, setError] = useState(null);
-  const [, , , getUserById] = useCrud("http://localhost:8080");
+  const [, , , getUserById] = useCrud(
+    "https://users-crud-backend-dev-dxxb.1.us-1.fl0.io"
+  );
 
   const { id } = useParams();
 
