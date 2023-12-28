@@ -12,12 +12,12 @@ const UserCard = ({
   const [openModalDelete, setOpenModalDelete] = useState(false);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
-  const handleModalDelet = () => {
+  const handleModalDelet = (e) => {
+    e.stopPropagation();
     setOpenModalDelete(!openModalDelete);
   };
 
-  const handleDelete = (e) => {
-    e.stopPropagation();
+  const handleDelete = () => {
     deleteUser("/users", user.id);
     setShowSuccessMessage(true);
 
