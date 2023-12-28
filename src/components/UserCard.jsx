@@ -12,8 +12,7 @@ const UserCard = ({
   const [openModalDelete, setOpenModalDelete] = useState(false);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
-  const handleModalDelet = (e) => {
-    e.stopPropagation();
+  const handleModalDelet = () => {
     setOpenModalDelete(!openModalDelete);
   };
 
@@ -65,7 +64,13 @@ const UserCard = ({
           </span>
         </li>
         <div className="usercard__btn">
-          <i className="bx bxs-trash delete" onClick={handleModalDelet}></i>
+          <i
+            className="bx bxs-trash delete"
+            onClick={(e) => {
+              e.stopPropagation();
+              handleModalDelet();
+            }}
+          ></i>
           {openModalDelete && (
             <DeleteUserModal
               handleModalDelet={handleModalDelet}
